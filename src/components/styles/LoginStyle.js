@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import emailIconSrc from '../../assets/image/email.svg';
+import pwIconSrc from '../../assets/image/pw.svg';
 
 export const Form = styled.form`
   display: flex;
@@ -44,7 +46,7 @@ export const SignTxt = styled(Link)`
   text-decoration: none;
   color: #0c21c1;
   display: inline-flex;
-  margin-left: 168px;
+  margin-left: 7px;
 `;
 
 export const Email = styled.div`
@@ -60,7 +62,7 @@ export const EmailInput = styled.input`
   width: 376px;
   height: 65px;
   padding: 0 27px;
-  margin-left: 122px;
+  margin-left: -17px;
   color: #000842;
   border: none;
   border-bottom: 2px solid #999999;
@@ -69,6 +71,18 @@ export const EmailInput = styled.input`
     outline: none;
   }
 `;
+
+export const EmailIcon = styled.img.attrs({
+  src: emailIconSrc,
+  alt: "EmailIcon",
+})`
+  margin-left: 122px;
+  margin-bottom: -3px;
+  position: relative;
+  z-index: 1;
+`;
+
+export const EmailContainer = styled.div``;
 
 export const Password = styled.div`
   font-size: 13px;
@@ -83,7 +97,7 @@ export const PwInput = styled.input`
   width: 376px;
   height: 65px;
   padding: 0 27px;
-  margin-left: 122px;
+  margin-left: -17px;
   color: #000842;
   border: none;
   border-bottom: 2px solid #999999;
@@ -93,11 +107,24 @@ export const PwInput = styled.input`
   }
 `;
 
+export const PwIcon = styled.img.attrs({
+  src: pwIconSrc,
+  alt: "PwIcon",
+})`
+  margin-left: 122px;
+  margin-bottom: -3px;
+  position: relative;
+  z-index: 1;
+`;
+
+export const PwContainer = styled.div``;
+
 export const CheckBox = styled.button`
   width: 15px;
   height: 15px;
   margin-left: 122px;
   margin-top: 20px;
+  accent-color: purple;
 `;
 
 export const LoginSave = styled.div`
