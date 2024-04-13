@@ -172,3 +172,5 @@ export const Snsbtn = styled(Link)`
   margin-left: 315px;
   margin-top: 20px;
 `;
+
+// 로그인 화면
