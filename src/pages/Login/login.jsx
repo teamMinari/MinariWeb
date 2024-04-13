@@ -3,8 +3,15 @@ import * as M from '../../components/styles/LoginStyle';
 import { ReactComponent as Logo } from '../../assets/image/logo.svg';
 import LoginBanner from '../../assets/image/Group 1544.svg';
 import { ReactComponent as Google } from '../../assets/image/google.svg';
+import { useNavigate } from 'react-router-dom';
 
-const login = () => {
+const Login = () => {
+    const navigate = useNavigate();
+
+    const handleGoogleLogin = () => {
+        navigate("/googleLogin");
+    };
+
     return (
         <M.Form>
             <M.LoginPart>
@@ -33,7 +40,7 @@ const login = () => {
                 <M.SnsTxt>
                     sns 로그인
                 </M.SnsTxt>
-                <M.Snsbtn>
+                <M.Snsbtn onClick={handleGoogleLogin}>
                     <Google />
                 </M.Snsbtn>
             </M.LoginPart>
@@ -44,4 +51,4 @@ const login = () => {
     );
 }
 
-export default login;
+export default Login;
