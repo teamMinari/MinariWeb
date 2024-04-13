@@ -1,7 +1,7 @@
 import React from "react";
 import * as M from '../../components/styles/LoginStyle';
 import { ReactComponent as Logo } from '../../assets/image/logo.svg';
-import LoginBanner from '../../assets/image/loginbanner.svg';
+import LoginBanner from '../../assets/image/Group 1544.svg';
 import { ReactComponent as Google } from '../../assets/image/google.svg';
 
 const login = () => {
@@ -24,11 +24,11 @@ const login = () => {
                     <M.PwIcon />
                     <M.PwInput type="password" placeholder="비밀번호를 입력하세요."></M.PwInput>
                 </M.PwContainer>
-                <div>
-                    <M.CheckBox type="checkbox"></M.CheckBox>
-                    <M.LoginSave>로그인 저장</M.LoginSave>
+                <M.SaveAndForgotContainer>
+                    <M.LoginSave type="checkbox" id="loginSave" />
+                    <M.LoginSaveLabel htmlFor="loginSave">로그인 저장</M.LoginSaveLabel>
                     <M.PwForgot>비밀번호를 잊으셨나요?</M.PwForgot>
-                </div>
+                </M.SaveAndForgotContainer>
                 <M.LoginBtn>로그인</M.LoginBtn>
                 <M.SnsTxt>
                     sns 로그인

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import emailIconSrc from '../../assets/image/email.svg';
-import pwIconSrc from '../../assets/image/pw.svg';
+import emailIconSrc from "../../assets/image/email.svg";
+import pwIconSrc from "../../assets/image/pw.svg";
 
 export const Form = styled.form`
   display: flex;
@@ -21,8 +21,9 @@ export const Container = styled.div`
 
 export const BannerContainer = styled.div`
   margin-left: auto;
-  margin-right: 22px;
-  width: 735px;
+  margin-right: 20px;
+  margin-top: 30px;
+  width: 680px;
   height: 859px;
 `;
 
@@ -30,13 +31,13 @@ export const Title = styled.div`
   font-size: 30px;
   font-weight: 700;
   margin-left: 122px;
-  margin-top: 86px;
+  margin-top: 46px;
 `;
 
 export const LoginInfo = styled.div`
   font-size: 15px;
   font-weight: light;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: 122px;
 `;
 
@@ -45,7 +46,6 @@ export const SignTxt = styled(Link)`
   font-weight: 700;
   text-decoration: none;
   color: #0c21c1;
-  display: inline-flex;
   margin-left: 7px;
 `;
 
@@ -119,18 +119,16 @@ export const PwIcon = styled.img.attrs({
 
 export const PwContainer = styled.div``;
 
-export const CheckBox = styled.button`
-  width: 15px;
-  height: 15px;
-  margin-left: 122px;
-  margin-top: 20px;
-  accent-color: purple;
-`;
-
-export const LoginSave = styled.div`
+export const LoginSave = styled.input`
   font-size: 12px;
   font-weight: light;
   display: inline-block;
+  margin-left: 122px;
+`;
+
+export const LoginSaveLabel = styled.html`
+  font-size: 12px;
+  font-weight: light;
   margin-left: 10px;
 `;
 
@@ -140,6 +138,12 @@ export const PwForgot = styled.div`
   display: inline-block;
   color: #4d4d4d;
   margin-left: 226px;
+`;
+
+export const SaveAndForgotContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 `;
 
 export const LoginBtn = styled.button`
@@ -166,5 +170,5 @@ export const SnsTxt = styled.div`
 
 export const Snsbtn = styled(Link)`
   margin-left: 315px;
-  margin-top: 28px;
+  margin-top: 20px;
 `;
