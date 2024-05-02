@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import homeIconSrc from "../../assets/image/home.svg";
-import dictionaryIconSrc from "../../assets/image/dictionary.svg";
-import newsIconSrc from "../../assets/image/news.svg";
-import quizIconSrc from "../../assets/image/quiz.svg";
-import profileIconSrc from "../../assets/image/my.svg";
+import homeIconSrc from '../assets/image/home.svg';
+import dictionaryIconSrc from '../assets/image/dictionary.svg';
+import newsIconSrc from '../assets/image/news.svg';
+import quizIconSrc from '../assets/image/quiz.svg';
+import profileIconSrc from '../assets/image/my.svg';
 
 const activeStyle = {
   backgroundColor: "#363CD5",
@@ -23,6 +23,8 @@ export const Sidebar = styled.div`
   border-right: 1px solid #d7dbec;
   display: flex;
   flex-direction: column;
+  padding-top: 75px;
+  z-index: 0;
 `;
 
 export const Menu = styled.div`
@@ -34,6 +36,9 @@ export const Menu = styled.div`
   font-size: 20px;
   font-weight: 600;
   color: #7e84a3;
+  : hover{
+    cursor: pointer;
+  }
 `;
 
 const iconStyle = `
@@ -49,7 +54,7 @@ export const HomeImg = styled.img.attrs({
   margin-left: 1px;
 `;
 
-export const HomeMenu = styled(NavLink)`
+export const HomeMenu = styled.div`
   text-decoration: none;
   color: inherit;
   margin-bottom: 50px;
@@ -66,7 +71,7 @@ export const DictionaryImg = styled.img.attrs({
   margin-left: -1px;
 `;
 
-export const DictionaryMenu = styled(NavLink)`
+export const DictionaryMenu = styled.div`
   text-decoration: none;
   color: inherit;
   margin-bottom: 50px;
@@ -82,7 +87,7 @@ export const NewsImg = styled.img.attrs({
   ${iconStyle}
 `;
 
-export const NewsMenu = styled(NavLink)`
+export const NewsMenu = styled.div`
   text-decoration: none;
   color: inherit;
   margin-bottom: 50px;
@@ -98,7 +103,7 @@ export const QuizImg = styled.img.attrs({
   ${iconStyle}
 `;
 
-export const QuizMenu = styled(NavLink)`
+export const QuizMenu = styled.div`
   text-decoration: none;
   color: inherit;
   margin-bottom: 50px;
@@ -114,7 +119,7 @@ export const profileImg = styled.img.attrs({
   ${iconStyle}
 `;
 
-export const ProfileMenu = styled(NavLink)`
+export const ProfileMenu = styled.div`
   text-decoration: none;
   color: inherit;
   margin-bottom: 50px;

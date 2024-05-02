@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import logoImg from "../../assets/image/logo.svg";
+import logoImg from '../assets/image/logo.svg';
+import profileImg from '../assets/image/profile.svg';
 import { NavLink } from "react-router-dom";
-import profileImg from '../../assets/image/profile.svg';
 
 export const Form = styled.form`
   display: flex;
@@ -15,6 +15,8 @@ export const Bar = styled.header`
   box-shadow: 0px 2px 10px rgba(0, 2, 5, 0.1);
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 `;
 
 export const Container = styled.div`
