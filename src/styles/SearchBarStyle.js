@@ -5,7 +5,7 @@ export const Bar = styled.div`
 width: 750px;
 height: 50px;
 border-radius: 10px;
-background-color: #F6F6F6;
+background-color: #ffffff;
 align-items: center;
 justify-content: center;`
 
@@ -25,10 +25,10 @@ export const SearchIcon = styled.img.attrs({
   border: none;
   outline: none;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   margin-left: 20px;
   margin-top: 8px;
-  background-color: #F6F6F6;
+  background-color: #ffffff;
   &::placeholder {
     color: #000000;
     font-size: 15px;
