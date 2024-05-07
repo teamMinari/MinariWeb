@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import logoImg from '../assets/image/logo.svg';
-import profileImg from '../assets/image/profile.svg';
 import { NavLink } from "react-router-dom";
 
 export const Form = styled.form`
@@ -23,12 +21,14 @@ export const Container = styled.div`
   margin-left: 118px;
 `;
 
-export const LogoImg = styled.img.attrs({
-  src: logoImg,
-  alt: "logo",
-})`
+export const LogoLink = styled(NavLink)`
   display: block;
   width: 150px;
+`;
+
+export const LogoImg = styled.img`
+  display: block;
+  width: 100%;
 `;
 
 export const AuthContainer = styled(NavLink)`
@@ -39,11 +39,8 @@ export const AuthContainer = styled(NavLink)`
   margin-left: auto;
 `;
 
-export const MemberProfile = styled.img.attrs({
-  src: profileImg,
-  alt: "profile",
-})`
-width: 37px;
+export const MemberProfile = styled.img`
+  width: 37px;
 `;
 
 export const MemberName = styled.div`
