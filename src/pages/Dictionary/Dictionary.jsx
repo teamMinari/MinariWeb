@@ -38,10 +38,6 @@ const Dictionary = () => {
               <M.BtnContainer>
                 <M.TagBtn selected={selectedTag === "금융"}
                   onClick={() => handleTagClick("금융")}>금융</M.TagBtn>
-                <M.TagBtn selected={selectedTag === "산업"}
-                  onClick={() => handleTagClick("산업")}>산업</M.TagBtn>
-                <M.TagBtn selected={selectedTag === "IT"}
-                  onClick={() => handleTagClick("IT")}>IT</M.TagBtn>
                 <M.TagBtn selected={selectedTag === "증권"}
                   onClick={() => handleTagClick("증권")}>증권</M.TagBtn>
                 <M.TagBtn selected={selectedTag === "부동산"}

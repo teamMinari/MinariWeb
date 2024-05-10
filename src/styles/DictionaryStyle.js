@@ -29,10 +29,11 @@ export const CenteredContent = styled.div`
 
 export const DictionaryContainer = styled.div`
   width: 900px;
-  height: 1800px;
+  height: 1600px;
   background-color: #ffffff;
   border-radius: 10px;
   margin-top: 47px;
+  margin-bottom: 100px;
 `;
 
 export const PageText = styled.div`
