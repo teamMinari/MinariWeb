@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "../pages/Login/Login";
-import Dictionary from "../pages/Dictionary/Dictionary";
+import Login from '../pages/Login/login';
+import Dictionary from '../pages/Dictionary/Dictionary';
 import SearchBar from "../components/SearchBar/SearchBar";
 import TermMeaning from "../pages/Dictionary/TermMeaning";
 
