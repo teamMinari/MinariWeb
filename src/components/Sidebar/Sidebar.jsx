@@ -43,7 +43,7 @@ const SideBar = () => {
           </M.QuizMenu>
           <M.ProfileMenu
             onClick={() => {
-              navigation("/myprofile");
+              navigation("/profile");
             }}
           >
             <M.profileImg />
