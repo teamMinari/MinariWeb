@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import emailIconSrc from "../../assets/image/email.svg";
-import pwIconSrc from "../../assets/image/pw.svg";
+import emailIconSrc from '../assets/image/email.svg';
+import pwIconSrc from '../assets/image/pw.svg';
 
 export const Form = styled.form`
   display: flex;

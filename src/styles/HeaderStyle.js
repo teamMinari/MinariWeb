@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import logoImg from "../../assets/image/logo.svg";
 import { NavLink } from "react-router-dom";
-import profileImg from '../../assets/image/profile.svg';
 
 export const Form = styled.form`
   display: flex;
@@ -15,18 +13,22 @@ export const Bar = styled.header`
   box-shadow: 0px 2px 10px rgba(0, 2, 5, 0.1);
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 `;
 
 export const Container = styled.div`
   margin-left: 118px;
 `;
 
-export const LogoImg = styled.img.attrs({
-  src: logoImg,
-  alt: "logo",
-})`
+export const LogoLink = styled(NavLink)`
   display: block;
   width: 150px;
+`;
+
+export const LogoImg = styled.img`
+  display: block;
+  width: 100%;
 `;
 
 export const AuthContainer = styled(NavLink)`
@@ -37,15 +39,12 @@ export const AuthContainer = styled(NavLink)`
   margin-left: auto;
 `;
 
-export const MemberProfile = styled.img.attrs({
-  src: profileImg,
-  alt: "profile",
-})`
-width: 37px;
+export const MemberProfile = styled.img`
+  width: 37px;
 `;
 
 export const MemberName = styled.div`
-font-size: 13px
+font-size: 13px;
 font-weight: 600;
 color: #878787;
 margin-left: 20px;
