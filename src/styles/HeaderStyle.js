@@ -44,9 +44,9 @@ export const MemberProfile = styled.img`
 `;
 
 export const MemberName = styled.div`
-font-size: 13px
-font-weight: 600;
-color: #878787;
-margin-left: 20px;
-margin-right: 80px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #878787;
+  margin-left: 20px;
+  margin-right: 80px;
 `;
