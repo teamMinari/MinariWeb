@@ -22,6 +22,8 @@ export const bannerStyle = css`
   object-fit: contain;
   width: 900px;
 `;
+
+
 export const walletIconStyle = css`
   object-fit: contain;
   width: 202px;  /* 아이콘 너비 */
@@ -68,6 +70,15 @@ export const bannerWarp = styled.div`
 
 export const house = styled(Link)`
 `
+export const chart = styled(Link)`
+`
+export const coin = styled(Link)`
+`
+export const earth = styled(Link)`
+`
+export const wallet = styled(Link)`
+`
+
 
 export const houseImg = styled.img.attrs({
   src: HouseImg,

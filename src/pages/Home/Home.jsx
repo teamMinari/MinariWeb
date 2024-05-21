@@ -7,15 +7,27 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
     const navigate = useNavigate();
 
-    const goto = () => {
-        navigate("/gogogo");
+    const handleGoToHome = () => {
+        navigate("/wordHome");
+    };
+    const handleGoToChart = () => {
+        navigate("/wordChart");
+    };
+    const handleGoToCoin = () => {
+        navigate("/wordCoin");
+    };
+    const handleGoToEarth = () => {
+        navigate("/wordEarth");
+    };
+    const handleGoToWallet = () => {
+        navigate("/wordWallet");
     };
     return (
     <>
       <Header />
       <M.GlobalStyles />
       <M.PageContent>
-        <SideBar />
+        <SideBar/>
         <M.MainContent>
           <M.CenteredContent>
             <M.RecommendWordContainer>
@@ -30,17 +42,25 @@ const Home = () => {
                 </M.wordSpace>
             </M.RecommendWordContainer>
             <M.menu>
-                <M.house onClick={goto}>
+                <M.house onClick={handleGoToHome}>
                     <M.houseImg/>
                 </M.house>
                 <M.HorizontalLine/>
-                <M.chartImg/>
+                <M.chart onClick={handleGoToChart}>
+                    <M.chartImg/>
+                </M.chart>
                 <M.HorizontalLine/>
-                <M.coinImg/>
+                <M.coin onClick={handleGoToCoin}>
+                    <M.coinImg/>
+                </M.coin>
                 <M.HorizontalLine/>
-                <M.earthImg/>
+                <M.earth onClick={handleGoToEarth}>
+                    <M.earthImg/>
+                </M.earth>
                 <M.HorizontalLine/>
-                <M.walletImg/>
+                <M.wallet onClick={handleGoToWallet}>
+                    <M.walletImg/>
+                </M.wallet>
             </M.menu>
             <M.bannerWarp>
                 <M.banner/>
