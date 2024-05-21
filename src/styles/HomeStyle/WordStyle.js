@@ -44,5 +44,6 @@ export const likeIcon = styled.img.attrs((props) => ({
 }))`
   width: 20px;
   height: 20px;
-  filter: ${(props) => (props.liked ? "grayscale(0%)" : "grayscale(80%)")};
+  margin-bottom:-5px;
+  filter: ${(props) => (props.liked ? "grayscale(0%) " : "grayscale(80%) brightness(200%)")};
 `;

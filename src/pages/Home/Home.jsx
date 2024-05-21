@@ -8,7 +8,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     const goto = () => {
-        navigate("/googleLogin");
+        navigate("/gogogo");
     };
     return (
     <>
@@ -30,7 +30,9 @@ const Home = () => {
                 </M.wordSpace>
             </M.RecommendWordContainer>
             <M.menu>
-                <M.houseImg/>
+                <M.house onClick={goto}>
+                    <M.houseImg/>
+                </M.house>
                 <M.HorizontalLine/>
                 <M.chartImg/>
                 <M.HorizontalLine/>

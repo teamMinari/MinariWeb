@@ -5,6 +5,7 @@ import CoinImg from "../../assets/image/coinText.png"
 import EarthImg from "../../assets/image/earthText.png"
 import WalletImg from "../../assets/image/walletText.png"
 import BannerImg from "../../assets/image/banner.png"
+import { Link } from "react-router-dom";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -63,6 +64,9 @@ export const bannerWarp = styled.div`
   margin-top: 47px;
   align-items: center;
   justify-content: flex-start;
+`
+
+export const house = styled(Link)`
 `
 
 export const houseImg = styled.img.attrs({
