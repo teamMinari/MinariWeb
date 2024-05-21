@@ -1,34 +1,24 @@
-import styled, { createGlobalStyle, css } from "styled-components";
-import StarImg from"../../assets/image/star.svg";
-
-export const GlobalStyles = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    background-color: #F5F6FA;
-  }
-`;
+import styled from "styled-components";
+import StarImg from "../../assets/image/star.svg";
+import LikeIcon from "../../assets/image/like.svg";
 
 export const starImg = styled.img.attrs({
-    src: StarImg,
-    alt: "starIcon",
-  })`
-`;
+  src: StarImg,
+  alt: "starIcon",
+})``;
 
 export const wordContainer = styled.div`
-    width: 210px;
-    height: 60px;
-    background-color: #F5F6FA;
-    border-radius: 7px;
-    padding-left: 35px;
-    display: flex;
-    margin-right: 55px;
-    font-weight: 600;
-    align-items: center;
-    margin-bottom: 25px;
+  width: 230px;
+  height: 60px;
+  background-color: #f5f6fa;
+  border-radius: 7px;
+  padding-left: 18px;
+  padding-right: 18px;
+  display: flex;
+  margin-right: 55px;
+  font-weight: 600;
+  align-items: center;
+  margin-bottom: 25px;
 `;
 
 export const text = styled.div`
@@ -37,6 +27,22 @@ export const text = styled.div`
 
 export const starsContainer = styled.div`
   display: flex;
-  margin-left: 10px; /* txt와 score 사이의 공간 */
-  margin-right: 35px; /* score와 우측 끝 사이의 공간 */
+  margin-left: 10px;
+  margin-right: 35px;
+`;
+
+export const likeButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+`;
+
+export const likeIcon = styled.img.attrs((props) => ({
+  src: LikeIcon,
+  alt: "likeIcon",
+}))`
+  width: 20px;
+  height: 20px;
+  filter: ${(props) => (props.liked ? "grayscale(0%)" : "grayscale(80%)")};
 `;

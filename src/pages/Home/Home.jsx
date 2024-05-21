@@ -2,9 +2,14 @@ import SideBar from "../../components/Sidebar/Sidebar";
 import Header from "../../components/Header/Header";
 import * as M from "../../styles/HomeStyle/HomeStyle";
 import WordComponents from "./wordComponents";
-
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+    const navigate = useNavigate();
+
+    const goto = () => {
+        navigate("/googleLogin");
+    };
     return (
     <>
       <Header />
@@ -25,8 +30,19 @@ const Home = () => {
                 </M.wordSpace>
             </M.RecommendWordContainer>
             <M.menu>
-
+                <M.houseImg/>
+                <M.HorizontalLine/>
+                <M.chartImg/>
+                <M.HorizontalLine/>
+                <M.coinImg/>
+                <M.HorizontalLine/>
+                <M.earthImg/>
+                <M.HorizontalLine/>
+                <M.walletImg/>
             </M.menu>
+            <M.bannerWarp>
+                <M.banner/>
+            </M.bannerWarp>
           </M.CenteredContent>
         </M.MainContent>
       </M.PageContent>
