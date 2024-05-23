@@ -14,6 +14,8 @@ export const GlobalStyles = createGlobalStyle`
 export const PageContent = styled.div`
   display: flex;
   z-index: 1;
-  flex-direction: flex;
 `;
 
+export const WordsContainer = styled.div`
+  flex-direction: column;
+`;

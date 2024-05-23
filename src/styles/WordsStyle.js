@@ -9,7 +9,7 @@ export const WordsContainer = styled.div`
   margin-top: 65px;
   margin-left: 120px;
   position: relative;
-  
+  margin-bottom: -40px;
 `;
 
 export const TermTxt = styled.div`
