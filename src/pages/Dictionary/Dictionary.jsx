@@ -5,7 +5,6 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import SearchBar from "../../components/SearchBar/SearchBar";
 import { useState } from "react";
 import Term from "../../components/Term/Term";
-import { render } from "@testing-library/react";
 
 const Dictionary = () => {
   const [selectedTag, setSelectedTag] = useState(null);

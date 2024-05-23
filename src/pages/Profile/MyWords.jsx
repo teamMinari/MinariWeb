@@ -15,7 +15,7 @@ const MyWords = () => {
         <M.WordContainer>
           <M.ContainerTxt>내 단어장</M.ContainerTxt>
           <BasicList />
-          <Link to="/home" style={{textDecoration: "none"}}>
+          <Link to="/dictionary" style={{textDecoration: "none"}}>
             <M.MoreWords>
               <M.MoreText>용어 더 담으러 가기 〉</M.MoreText>
             </M.MoreWords>

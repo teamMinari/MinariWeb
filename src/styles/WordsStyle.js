@@ -1,41 +1,33 @@
-import { Link, NavLink } from "react-router-dom";
 import styled, { css } from "styled-components";
 import heartIconSrc from "../assets/image/heart.svg";
 
-export const Container = styled.div`
-  width: 830px;
-  height: 200px;
-  border-top: 1px solid #d7dbec;
-  border-bottom: 1px solid #d7dbec;
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: -11px;
+export const WordsContainer = styled.div`
+  width: 800px;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 65px;
+  margin-left: 120px;
   position: relative;
+  
 `;
 
 export const TermTxt = styled.div`
-  font-size: 20px;
+  font-size: 17px;
   font-weight: normal;
   color: inherit;
   padding: 10px;
+  margin-left: 10px;
   margin-top: 10px;
   text-decoration: underline;
 `;
 
 export const TermExplanation = styled.div`
-  font-size: 18px;
+  font-size: 15px;
   font-weight: normal;
   color: #4f4f4f;
-  padding: 10px;
-`;
-
-export const ReferTxt = styled.div`
-  font-size: 18px;
-  font-weight: normal;
-  color: #363cd5;
-  padding: 10px;
-  position: absolute;
-  bottom: 10px;
+  padding: 5px;
+  margin-left: 15px;
 `;
 
 export const InfoContainer = styled.div`
@@ -50,8 +42,7 @@ export const HeartImg = styled.img.attrs({
 
 export const HeartContainer = styled.div`
   position: absolute;
-  right: 0;
-  margin-right: 20px;
+  right: 25px;
   cursor: pointer;
   margin-top: 5px;
   ${(props) =>
@@ -60,10 +51,4 @@ export const HeartContainer = styled.div`
       filter: brightness(0) saturate(100%) invert(14%) sepia(63%)
         saturate(6142%) hue-rotate(243deg) brightness(92%) contrast(93%);
     `}
-`;
-
-export const ReferContainer = styled.div`
-  display: flex;
-  align-items: center;
-  bottom: 10px;
 `;
