@@ -30,7 +30,7 @@ export const SearchIcon = styled.img.attrs({
   margin-top: 8px;
   background-color: #ffffff;
   &::placeholder {
-    color: #000000;
+    color: #7E84A3;
     font-size: 15px;
   }
 `;

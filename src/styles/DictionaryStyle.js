@@ -29,25 +29,26 @@ export const CenteredContent = styled.div`
 
 export const DictionaryContainer = styled.div`
   width: 900px;
-  height: 1800px;
+  height: 1600px;
   background-color: #ffffff;
   border-radius: 10px;
   margin-top: 47px;
+  margin-bottom: 100px;
 `;
 
-export const pageText = styled.div`
-  font-weight: 700;
+export const PageText = styled.div`
+  font-weight: 600;
   font-size: 25px;
   margin-left: 35px;
   margin-top: 45px;
 `;
 
-export const btnContainer = styled.div`
+export const BtnContainer = styled.div`
   space-between: 15px;
   padding: 35px;
 `;
 
-export const tagBtn = styled.button`
+export const TagBtn = styled.button`
   width: 95px;
   height: 35px;
   border-radius: 10px;
@@ -66,12 +67,12 @@ export const tagBtn = styled.button`
     `}
 `;
 
-export const textContainer = styled.div`
+export const TextContainer = styled.div`
   margin-left: 40px;
   display: flex;
 `;
 
-export const textSort = styled.div`
+export const TextSort = styled.div`
   font-size: 15px;
   font-weight: 600;
   margin-right: 10px;
