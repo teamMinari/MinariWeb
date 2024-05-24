@@ -2,6 +2,7 @@ import React from "react";
 import * as M from "../../styles/DictionaryStyle";
 import Header from "../../components/Header/Header";
 import Sidebar from '../../components/Sidebar/Sidebar';
+
 import SearchBar from "../../components/SearchBar/SearchBar";
 import { useState } from "react";
 import Term from "../../components/Term/Term";
