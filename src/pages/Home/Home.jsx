@@ -80,13 +80,15 @@ const Home = () => {
                         <SimpleNews query={query} />
                     </M.NewsContainer>
                     
+{/*                     
+                    검색 테스트용 인풋 창
                     <input 
                         type="text" 
                         placeholder="검색어를 입력하세요" 
                         value={input} 
                         onChange={(e) => setInput(e.target.value)}
                     />
-                    <button onClick={handleSearch}>검색</button>
+                    <button onClick={handleSearch}>검색</button> */}
                 </M.SimpleNewsCenterWrapper>
             </M.SimpleNewsContainer>
             <M.BannerWarp>

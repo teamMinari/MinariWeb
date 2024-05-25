@@ -93,4 +93,5 @@ export const News = styled.div`
   border: 1px solid #d7dbec;
   border-radius: 10px;
   margin: 35px auto 0;;
+  display: flex;
 `;
