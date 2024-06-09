@@ -3,7 +3,7 @@ import * as M from "../../styles/TermMeaningStyle";
 import Header from "../../components/Header/Header";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import SearchBar from "../../components/SearchBar/SearchBar";
-import loading from '../../assets/image/loading.svg';
+import loading from "../../assets/image/loading.svg";
 
 const TermMeaning = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -93,7 +93,10 @@ const TermMeaning = () => {
                 </p>
               </>
             ) : (
-              <img src={loading} alt="Loading..." />
+              <div className="loading-container">
+                <img src={loading} alt="Loading..." />
+                <div className="loading-text">현재 <span className="blue-text">인공지능</span>이 해당 용어의 해설을 불러오고 있어요!</div>
+              </div>
             )}
           </div>
         </div>

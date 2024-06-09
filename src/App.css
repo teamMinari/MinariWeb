@@ -53,3 +53,14 @@ p {
   display: block;
   margin: auto;
 }
+
+.loading-text {
+  font-weight: 700;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.blue-text {
+  color: #373DD6;
+}

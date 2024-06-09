@@ -11,7 +11,7 @@ export default function BasicList() {
     const navigate = useNavigate();
 
     const onClickBtn = () => {
-        navigate("/");
+        navigate("/wordslist");
     }
  
   return (
