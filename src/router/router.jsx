@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "../pages/Login/login";
 import Dictionary from "../pages/Dictionary/Dictionary";
 import SearchBar from "../components/SearchBar/SearchBar";
+import Home from "../pages/Home/Home";
 import TermMeaning from "../pages/Dictionary/TermMeaning";
 import Profile from "../pages/Profile/Profile";
 import MyWords from "../pages/Profile/MyWords";
@@ -12,7 +13,7 @@ const AppRouter = ({ openModal, closeModal, isOpen }) => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dictionary" element={<Dictionary />} />
         <Route path="/searchbar" element={<SearchBar />} />
