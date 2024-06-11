@@ -1,10 +1,32 @@
-import React from "react";
-import * as M from "../../styles/TermMeaning";
+import React, { useState, useEffect } from "react";
+import * as M from "../../styles/TermMeaningStyle";
 import Header from "../../components/Header/Header";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import loading from "../../assets/image/loading.svg";
 
 const TermMeaning = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [showText, setShowText] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      const timer = setTimeout(() => {
+        setShowText(true);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
+
   return (
     <React.Fragment>
       <Header />
@@ -32,8 +54,12 @@ const TermMeaning = () => {
                 않는다.
               </M.TermExplanation>
               <M.Container>
-                <M.SimilarWord>► 연관검색어 : 총부채원리금상환비율(DSR)</M.SimilarWord>
-                <M.EasyMeaningBtn>쉬운 용어 풀이</M.EasyMeaningBtn>
+                <M.SimilarWord>
+                  ► 연관검색어 : 총부채원리금상환비율(DSR)
+                </M.SimilarWord>
+                <M.EasyMeaningBtn onClick={openModal}>
+                  쉬운 용어 풀이
+                </M.EasyMeaningBtn>
               </M.Container>
               <M.RelatedNews>► 관련 기사&사건</M.RelatedNews>
               <M.News></M.News>
@@ -41,6 +67,40 @@ const TermMeaning = () => {
           </M.CenteredContent>
         </M.MainContent>
       </M.PageContent>
+      {isOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModal}>
+              &times;
+            </span>
+            {showText ? (
+              <>
+                <h2>가계부실위험지수(HDRI)</h2>
+                <p>
+                  가계부실위험지수(HDRI)는 가구들이 빚을 갚는 능력을 평가하는
+                  지표입니다.
+                  <br />이 지표는 가구의 소득과 자산을 고려하여 만들어졌어요.
+                  소득 측면에서는 원리금 상환 비율(DSR)이라는 것을 보고, 자산
+                  측면에서는 부채와 자산의 비율(DTA)을 봐요. 이 두 가지를
+                  결합하여 HDRI를 계산합니다. <br />
+                  만약에 가구의 DSR과 DTA가 각각 40%와 100%라면, HDRI는 100이
+                  됩니다. HDRI가 100을 넘는 가구는 '위험가구'로 분류돼요. 이
+                  가구들은 소득과 자산 측면에서 모두 취약하거나 그 중 하나에서
+                  취약한 경우로 나뉘어요. <br />
+                  하지만 이런 위험가구나 고위험가구라고 해서 바로 채무 불이행을
+                  의미하지는 않아요. 이 지수는 단지 가구들의 채무상환 능력이
+                  얼마나 취약한지를 평가하는 도구에 불과해요.
+                </p>
+              </>
+            ) : (
+              <div className="loading-container">
+                <img src={loading} alt="Loading..." />
+                <div className="loading-text">현재 <span className="blue-text">인공지능</span>이 해당 용어의 해설을 불러오고 있어요!</div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </React.Fragment>
   );
 };

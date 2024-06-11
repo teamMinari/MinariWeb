@@ -59,7 +59,7 @@ export const HomeMenu = styled.div`
   color: inherit;
   margin-bottom: 50px;
   &.active{
-    {activeStyle}
+    ${activeStyle}
   }
 `;
 
@@ -76,7 +76,7 @@ export const DictionaryMenu = styled.div`
   color: inherit;
   margin-bottom: 50px;
   &.active{
-    {activeStyle}
+    ${activeStyle}
   }
 `;
 
@@ -92,7 +92,7 @@ export const NewsMenu = styled.div`
   color: inherit;
   margin-bottom: 50px;
   &.active{
-    {activeStyle}
+    ${activeStyle}
   }
 `;
 
@@ -108,7 +108,7 @@ export const QuizMenu = styled.div`
   color: inherit;
   margin-bottom: 50px;
   &.active{
-    {activeStyle}
+    ${activeStyle}
   }
 `;
 
@@ -124,6 +124,6 @@ export const ProfileMenu = styled.div`
   color: inherit;
   margin-bottom: 50px;
   &.active{
-    {activeStyle}
+    ${activeStyle}
   }
 `;

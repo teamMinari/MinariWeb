@@ -77,6 +77,7 @@ export const EasyMeaningBtn = styled.button`
   color: #ffffff;
   font-size: 15px;
   font-weight: 600;
+  cursor: pointer;
 `;
 
 export const RelatedNews = styled.div`
@@ -92,5 +93,5 @@ export const News = styled.div`
   height: 230px;
   border: 1px solid #d7dbec;
   border-radius: 10px;
-  margin: 35px auto 0;;
+  margin: 35px auto 0;
 `;

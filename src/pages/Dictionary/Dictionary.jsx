@@ -6,7 +6,6 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import SearchBar from "../../components/SearchBar/SearchBar";
 import { useState } from "react";
 import Term from "../../components/Term/Term";
-import { render } from "@testing-library/react";
 
 const Dictionary = () => {
   const [selectedTag, setSelectedTag] = useState(null);
@@ -45,8 +44,8 @@ const Dictionary = () => {
                   onClick={() => handleTagClick("부동산")}>부동산</M.TagBtn>
                 <M.TagBtn selected={selectedTag === "글로벌 경제"}
                   onClick={() => handleTagClick("글로벌 경제")}>글로벌 경제</M.TagBtn>
-                <M.TagBtn selected={selectedTag === "채권"}
-                  onClick={() => handleTagClick("채권")}>채권</M.TagBtn>
+                <M.TagBtn selected={selectedTag === "산업/재계"}
+                  onClick={() => handleTagClick("산업/재계")}>산업/재계</M.TagBtn>
               </M.BtnContainer>
               <M.TextContainer>
                 <M.TextSort selected={selectedTxt === "가나다순"}
