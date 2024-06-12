@@ -79,7 +79,6 @@ const Home = () => {
                     <M.NewsContainer>
                         <SimpleNews query={query} />
                     </M.NewsContainer>
-                    
 {/*                     
                     검색 테스트용 인풋 창
                     <input 

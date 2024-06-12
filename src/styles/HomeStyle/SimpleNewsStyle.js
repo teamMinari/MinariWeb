@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const SimpleNewsContainer = styled.div`
     margin: 0;
     padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 8px;
     max-height: 500px;
     overflow-y: auto;

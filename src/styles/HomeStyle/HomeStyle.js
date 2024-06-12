@@ -219,7 +219,6 @@ export const NewsContainer = styled.div`
   border-radius: 29px;
   display: flex;
   padding-bottom: 1px;
-  border: #d2d2d2 solid 1px;
   overflow: scroll;
 `;
 
@@ -248,7 +247,7 @@ export const ChartContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding-bottom: 29px;
-  padding:30px
+  padding:30px;
 `;
 export const HorizontalLine = styled.div`
   width: 1px;
