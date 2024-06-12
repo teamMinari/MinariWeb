@@ -12,6 +12,7 @@ const SimpleNews = ({ query }) => {
                 const response = await axios.get('http://127.0.0.1:3000/search/news', {
                     params: { query }
                 });
+                console.log(response.data.items);
                 setArticles(response.data.items);
             } catch (error) {
                 console.error("Error fetching articles:", error);

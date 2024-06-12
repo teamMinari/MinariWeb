@@ -77,16 +77,16 @@ const Home = () => {
                 <M.PageText>오늘의 경제 관련 기사</M.PageText>
                 <M.SimpleNewsCenterWrapper>
                     <M.NewsContainer>
-                        <SimpleNews query={query} />
+                        <SimpleNews query={"경제"} />
                     </M.NewsContainer>
                     
-                    <input 
+                    {/* <input 
                         type="text" 
                         placeholder="검색어를 입력하세요" 
                         value={input} 
                         onChange={(e) => setInput(e.target.value)}
                     />
-                    <button onClick={handleSearch}>검색</button>
+                    <button onClick={handleSearch}>검색</button> */}
                 </M.SimpleNewsCenterWrapper>
             </M.SimpleNewsContainer>
             <M.BannerWarp>

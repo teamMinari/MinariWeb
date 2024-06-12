@@ -12,7 +12,7 @@ const SideBar = () => {
         <M.Menu>
           <M.HomeMenu
             onClick={() => {
-              navigation("/home");
+              navigation("/");
             }}
           >
             <M.HomeImg />홈
