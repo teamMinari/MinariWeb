@@ -1,12 +1,12 @@
 import React from "react";
-import * as M from "../../styles/LoginStyle";
+import * as M from '../../styles/SingupStyle';
 import { ReactComponent as Logo } from "../../assets/image/logo.svg";
 import LoginBanner from "../../assets/image/Group 1544.svg";
 import { ReactComponent as Google } from "../../assets/image/google.svg";
 import { useNavigate } from "react-router-dom";
 import useLogin from "../../Hooks/Login/useLogin";
 
-const Login = () => {
+const Signup = () => {
   const navigate = useNavigate();
   const {loginUser} = useLogin();
 
@@ -25,13 +25,13 @@ const Login = () => {
         <M.Container>
           <Logo />
         </M.Container>
-        <M.Title>로그인</M.Title>
-        <M.LoginInfo>
-          아직 회원가입을 하지 않으셨다면?
+        <M.Title>회원가입</M.Title>
+        <M.SignupInfo>
+          이미 계정이 있으시다면?
           <br />
           여기서
-          <M.SignTxt to="/signup">가입 하세요!</M.SignTxt>
-        </M.LoginInfo>
+          <M.SignTxt to="/login">로그인 하세요!</M.SignTxt>
+        </M.SignupInfo>
         <M.Email>이메일</M.Email>
         <M.EmailContainer>
           <M.EmailIcon />
@@ -40,6 +40,14 @@ const Login = () => {
             placeholder="이메일 주소를 입력하세요."
           ></M.EmailInput>
         </M.EmailContainer>
+        <M.Id>아이디</M.Id>
+        <M.PwContainer>
+          <M.UserIcon />
+          <M.IdInput
+            type="id"
+            placeholder="아이디를 입력하세요."
+          ></M.IdInput>
+        </M.PwContainer>
         <M.Password>비밀번호</M.Password>
         <M.PwContainer>
           <M.PwIcon />
@@ -48,16 +56,15 @@ const Login = () => {
             placeholder="비밀번호를 입력하세요."
           ></M.PwInput>
         </M.PwContainer>
-        <M.SaveAndForgotContainer>
-          <M.LoginSave type="checkbox" id="loginSave" />
-          <M.LoginSaveLabel htmlFor="loginSave">로그인 저장</M.LoginSaveLabel>
-          <M.PwForgot>비밀번호를 잊으셨나요?</M.PwForgot>
-        </M.SaveAndForgotContainer>
-        <M.LoginBtn type="submit">로그인</M.LoginBtn>
-        <M.SnsTxt>sns 로그인</M.SnsTxt>
-        <M.Snsbtn onClick={handleGoogleLogin}>
-          <Google />
-        </M.Snsbtn>
+        <M.Password>비밀번호 확인</M.Password>
+        <M.PwContainer>
+          <M.PwIcon />
+          <M.PwInput
+            type="password"
+            placeholder="비밀번호를 다시 입력하세요."
+          ></M.PwInput>
+        </M.PwContainer>
+        <M.SignupBtn type="submit">회원가입</M.SignupBtn>
       </M.LoginPart>
       <M.BannerContainer>
         <img src={LoginBanner} alt="Login Banner" />
@@ -66,4 +73,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
