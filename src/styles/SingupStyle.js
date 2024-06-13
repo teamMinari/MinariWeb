@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import emailIconSrc from "../../assets/image/email.svg";
-import pwIconSrc from "../../assets/image/pw.svg";
+import emailIconSrc from "../assets/image/email.svg";
+import pwIconSrc from "../assets/image/pw.svg";
+import userIconSrc from "../assets/image/user.svg";
 
 export const Form = styled.form`
   display: flex;
@@ -31,10 +32,10 @@ export const Title = styled.div`
   font-size: 30px;
   font-weight: 700;
   margin-left: 122px;
-  margin-top: 46px;
+  margin-top: 40px;
 `;
 
-export const LoginInfo = styled.div`
+export const SignupInfo = styled.div`
   font-size: 15px;
   font-weight: light;
   margin-top: 20px;
@@ -54,7 +55,7 @@ export const Email = styled.div`
   font-weight: normal;
   color: #999;
   margin-left: 122px;
-  margin-top: 60px;
+  margin-top: 35px;
 `;
 
 export const EmailInput = styled.input`
@@ -84,12 +85,46 @@ export const EmailIcon = styled.img.attrs({
 
 export const EmailContainer = styled.div``;
 
+export const Id = styled.div`
+  font-size: 13px;
+  font-weight: normal;
+  color: #999;
+  margin-left: 122px;
+  margin-top: 35px;
+  margin-bottom: -5px;
+`;
+
+export const IdInput = styled.input`
+  font-size: 15px;
+  width: 376px;
+  height: 65px;
+  padding: 0 27px;
+  margin-left: -17px;
+  color: #000842;
+  border: none;
+  border-bottom: 2px solid #999999;
+  &:focus {
+    border-bottom-color: #000842;
+    outline: none;
+  }
+`;
+
+export const UserIcon = styled.img.attrs({
+  src: userIconSrc,
+  alt: "UserIcon",
+})`
+  margin-left: 122px;
+  margin-bottom: -3px;
+  position: relative;
+  z-index: 1;
+`;
+
 export const Password = styled.div`
   font-size: 13px;
   font-weight: normal;
   color: #999;
   margin-left: 122px;
-  margin-top: 60px;
+  margin-top: 35px;
 `;
 
 export const PwInput = styled.input`
@@ -119,34 +154,7 @@ export const PwIcon = styled.img.attrs({
 
 export const PwContainer = styled.div``;
 
-export const LoginSave = styled.input`
-  font-size: 12px;
-  font-weight: light;
-  display: inline-block;
-  margin-left: 122px;
-`;
-
-export const LoginSaveLabel = styled.html`
-  font-size: 12px;
-  font-weight: light;
-  margin-left: 10px;
-`;
-
-export const PwForgot = styled.div`
-  font-size: 12px;
-  font-weight: light;
-  display: inline-block;
-  color: #4d4d4d;
-  margin-left: 226px;
-`;
-
-export const SaveAndForgotContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-`;
-
-export const LoginBtn = styled.button`
+export const SignupBtn = styled.button`
   font-size: 17px;
   font-weight: 600;
   width: 430px;
@@ -156,21 +164,7 @@ export const LoginBtn = styled.button`
   border: none;
   border-radius: 30px;
   margin-left: 122px;
-  margin-top: 60px;
+  margin-top: 40px;
   box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 `;
-
-export const SnsTxt = styled.div`
-  font-size: 15px;
-  font-weight: normal;
-  color: #b5b5b5;
-  margin-left: 302px;
-  margin-top: 42px;
-`;
-
-export const Snsbtn = styled(Link)`
-  margin-left: 315px;
-  margin-top: 20px;
-`;
-
-// 로그인 화면
