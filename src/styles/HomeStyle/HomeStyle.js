@@ -203,7 +203,7 @@ export const Menu = styled.div`
 `;
 
 export const SimpleNewsCenterWrapper = styled.div`
-  width: 800px;
+  width: 500px;
   height: 300px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -211,16 +211,18 @@ export const SimpleNewsCenterWrapper = styled.div`
   display: flex;
   border: #d2d2d2 solid 1px;
   margin-left: 45px;
+  padding: 0 15px
 `;
 export const NewsContainer = styled.div`
-  width: 400px;
-  height: 300px;
+  width:100%;
+  height: 298px;
   background-color: #ffffff;
-  border-radius: 29px;
+  position: relative;
   display: flex;
   padding-bottom: 1px;
-  border: #d2d2d2 solid 1px;
   overflow: scroll;
+  border-radius: 10px;
+
 `;
 
 
@@ -231,7 +233,7 @@ export const SimpleNewsContainer = styled.div`
   border-radius: 10px;
   margin-top: 47px;
   display: flex;
-  padding-bottom: 29px;
+  padding-bottom: 30px;
   flex-direction: column;
   justify-content: baseline;
 `;
@@ -248,7 +250,7 @@ export const ChartContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding-bottom: 29px;
-  padding:30px
+  padding:30px;
 `;
 export const HorizontalLine = styled.div`
   width: 1px;
