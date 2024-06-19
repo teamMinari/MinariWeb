@@ -9,6 +9,7 @@ import News from "../pages/News/News";
 import Profile from "../pages/Profile/Profile";
 import MyWords from "../pages/Profile/MyWords";
 import WordsList from "../pages/Profile/WordsList";
+import Quiz from "../pages/Quiz/Quiz";
 
 
 const AppRouter = ({ openModal, closeModal, isOpen }) => {
@@ -25,6 +26,7 @@ const AppRouter = ({ openModal, closeModal, isOpen }) => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/mywords" element={<MyWords />} />
         <Route path="/wordslist" element={<WordsList />} />
+        <Route path="/quiz" element={<Quiz />} />
       </Routes>
     </Router>
   );
