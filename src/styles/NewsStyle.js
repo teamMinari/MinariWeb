@@ -19,12 +19,12 @@ export const PageContent = styled.div`
 export const BtnContainer = styled.div`
   padding: 35px;
   padding-left: 0%;
+  padding-bottom:0;
 `;
 
 
 export const Article = styled.div`
-    margin: 10px 0;
-    padding-left: 150px;
+  margin: 30px 0;
 `;
 
 export const ArticleTitle = styled.a`
@@ -41,8 +41,9 @@ export const ArticleTitle = styled.a`
 export const ArticleDescription = styled.p`
     font-size: 1em;
     color: #666;
-    margin: 50px 0px;
     margin-top: 5px;
+
+    padding: 0;
 `;
 
 export const ArticleImage = styled.img`
@@ -78,12 +79,12 @@ export const NewsContainer = styled.div`
   background-color: #ffffff;
   border-radius: 10px;
   align-items: center;
-  padding: 5px 30px;
+  padding: 5px 50px;
 
 `;
 
 export const CenterdContent = styled.div`
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;

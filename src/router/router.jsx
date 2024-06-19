@@ -20,7 +20,7 @@ const AppRouter = ({ openModal, closeModal, isOpen }) => {
         <Route path="/dictionary" element={<Dictionary />} />
         <Route path="/searchbar" element={<SearchBar />} />
         <Route path="/termmeaning" element={<TermMeaning />} />
-        <Route path="/news" element={<News />} />
+        <Route path="/news" element={<News query={"경제"} />} />
         <Route path="/termmeaning" element={<TermMeaning openModal={openModal} closeModal={closeModal} isOpen={isOpen} />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/mywords" element={<MyWords />} />

@@ -18,7 +18,7 @@ export const Form = styled.form`
 
 export const Sidebar = styled.div`
   width: 300px;
-  height: 100vh;
+  height: auto;
   background-color: #fafbff;
   border-right: 1px solid #d7dbec;
   display: flex;
