@@ -10,7 +10,7 @@ app.use(cors());
 
 app.get('/search/news', function (req, res) {
    const query = encodeURI(req.query.query);
-   const api_url = `https://openapi.naver.com/v1/search/news.json?query=${query}&display=10&start=1&sort=sim`;
+   const api_url = `https://openapi.naver.com/v1/search/news.json?query=${query}&display=10&sort=sim`;
    const options = {
        url: api_url,
        headers: {
@@ -19,7 +19,7 @@ app.get('/search/news', function (req, res) {
        }
    };
    request.get(options, function (error, response, body) {
-       if (!error && response.statusCode == 200) {
+       if (!error && response.statusCode === 200) {
            res.writeHead(200, {'Content-Type': 'application/json;charset=utf-8'});
            res.end(body);
        } else {
@@ -30,7 +30,7 @@ app.get('/search/news', function (req, res) {
 });
 
 app.listen(3000, function () {
-   console.log('http://127.0.0.1:3000/search/news?query=검색어 app listening on port 3000!');
+   console.log('http://127.0.0.1:3000/search/news?query=경제 app listening on port 3000!');
 });
 
 // app.get('/scrape/economic-news', async (req, res) => {
@@ -38,7 +38,6 @@ app.listen(3000, function () {
 //         const url = 'https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=101';
 //         const response = await axios.get(url);
 //         const soup = new JSSoup(response.data);
-
 //         // 스크래핑할 뉴스 기사 요소 선택
 //         const articles = soup.findAll('a', 'cluster_text_headline'); // 적절한 선택자 설정
 //         const newsData = articles.map(article => ({

@@ -6,8 +6,12 @@ import SearchBar from "../components/SearchBar/SearchBar";
 import Home from "../pages/Home/Home";
 import TermMeaning from "../pages/Dictionary/TermMeaning";
 import News from "../pages/News/News";
+import Profile from "../pages/Profile/Profile";
+import MyWords from "../pages/Profile/MyWords";
+import WordsList from "../pages/Profile/WordsList";
 
-const AppRouter = () => {
+
+const AppRouter = ({ openModal, closeModal, isOpen }) => {
   return (
     <Router>
       <Routes>
@@ -17,6 +21,10 @@ const AppRouter = () => {
         <Route path="/searchbar" element={<SearchBar />} />
         <Route path="/termmeaning" element={<TermMeaning />} />
         <Route path="/news" element={<News />} />
+        <Route path="/termmeaning" element={<TermMeaning openModal={openModal} closeModal={closeModal} isOpen={isOpen} />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/mywords" element={<MyWords />} />
+        <Route path="/wordslist" element={<WordsList />} />
       </Routes>
     </Router>
   );

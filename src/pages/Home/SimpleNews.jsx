@@ -12,6 +12,7 @@ const SimpleNews = ({ query }) => {
                 const response = await axios.get('http://127.0.0.1:3000/search/news', {
                     params: { query }
                 });
+                console.log(response.data.items);
                 setArticles(response.data.items);
             } catch (error) {
                 console.error("Error fetching articles:", error);
@@ -33,13 +34,15 @@ const SimpleNews = ({ query }) => {
                     {articles && articles.length > 0 ? (
                         articles.map((article, index) => (
                             <M.Article key={index}>
-                                    <M.ArticleImage/>
-                                <M.ArticleTitle href={article.link} target="_blank" rel="noopener noreferrer">
-                                    {decodeHtml(article.title).replace(/<[^>]*>?/g, '')}
-                                </M.ArticleTitle>
-                                <M.ArticleDescription>
-                                    {decodeHtml(article.description).replace(/<[^>]*>?/g, '')}
-                                </M.ArticleDescription>
+                                    <img className="imgContainer" src="https://picsum.photos/120/80/?Enterprise" alt = "face"/>
+                                <M.ArticleText>
+                                    <M.ArticleTitle href={article.link} target="_blank" rel="noopener noreferrer">
+                                        {decodeHtml(article.title).replace(/<[^>]*>?/g, '')}
+                                    </M.ArticleTitle>
+                                    <M.ArticleDescription>
+                                        {decodeHtml(article.description).replace(/<[^>]*>?/g, '')}
+                                    </M.ArticleDescription>
+                                </M.ArticleText>
                             </M.Article>
                         ))
                     ) : (
