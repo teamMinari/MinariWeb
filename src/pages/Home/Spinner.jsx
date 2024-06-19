@@ -13,7 +13,14 @@ const SpinnerWrapper = styled.div`
   align-items: center;
   height: 250px;
   max-width: 100%;
-  width: 500px;
+  width: 100vw;
+`;
+const SpinnerCentered = styled.div`
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 `;
 
 const SpinnerCircle = styled.div`
@@ -27,7 +34,9 @@ const SpinnerCircle = styled.div`
 
 const Spinner = () => (
   <SpinnerWrapper>
-    <SpinnerCircle />
+    <SpinnerCentered>
+      <SpinnerCircle />
+    </SpinnerCentered>
   </SpinnerWrapper>
 );
 

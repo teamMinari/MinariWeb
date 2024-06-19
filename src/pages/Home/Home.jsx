@@ -79,6 +79,10 @@ const Home = () => {
                     <M.NewsContainer>
                         <SimpleNews query={"경제"} />
                     </M.NewsContainer>
+{/*                     
+                    검색 테스트용 인풋 창
+                    <input 
+                    =======
                     
                     {/* <input 
                         type="text" 
