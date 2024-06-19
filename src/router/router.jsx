@@ -5,6 +5,7 @@ import Dictionary from "../pages/Dictionary/Dictionary";
 import SearchBar from "../components/SearchBar/SearchBar";
 import Home from "../pages/Home/Home";
 import TermMeaning from "../pages/Dictionary/TermMeaning";
+import News from "../pages/News/News";
 
 const AppRouter = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouter = () => {
         <Route path="/dictionary" element={<Dictionary />} />
         <Route path="/searchbar" element={<SearchBar />} />
         <Route path="/termmeaning" element={<TermMeaning />} />
+        <Route path="/news" element={<News />} />
       </Routes>
     </Router>
   );

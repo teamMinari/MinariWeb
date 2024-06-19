@@ -1,4 +1,5 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
+
 export const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
@@ -10,13 +11,85 @@ export const GlobalStyles = createGlobalStyle`
   }
 `;
 
+export const PageContent = styled.div`
+  display: flex;
+  z-index: 1;
+`;
 
-export const RecommendWordContainer = styled.div`
-  width: 900px;
-  height: 310px;
+export const BtnContainer = styled.div`
+  padding: 35px;
+  padding-left: 0%;
+`;
+
+
+export const Article = styled.div`
+    margin: 10px 0;
+    padding-left: 150px;
+`;
+
+export const ArticleTitle = styled.a`
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+    
+`;
+
+export const ArticleDescription = styled.p`
+    font-size: 1em;
+    color: #666;
+    margin: 50px 0px;
+    margin-top: 5px;
+`;
+
+export const ArticleImage = styled.img`
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+`;
+
+
+
+export const TagBtn = styled.button`
+  width: 95px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid #d7dbec;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #7e84a3;
+  margin-right: 15px;
+  ${(props) =>
+    props.selected &&
+    css`
+      background-color: #363CD5;
+      color: #ffffff;
+    `}
+`;
+
+export const NewsContainer = styled.div`
+  width: 950px;
+  height: auto;
   background-color: #ffffff;
   border-radius: 10px;
-  margin-top: 47px;
   align-items: center;
-  justify-content: flex-start;
+  padding: 5px 30px;
+
+`;
+
+export const CenterdContent = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const SearchContainer = styled.div`
+  margin: 40px 0;
+  margin-bottom: 55px;
 `;
