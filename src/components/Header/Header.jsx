@@ -8,7 +8,7 @@ const header = () => {
     <M.Form>
       <M.Bar>
         <M.Container>
-          <M.LogoLink to="/home">
+          <M.LogoLink to="/">
             <M.LogoImg src={logoImg} alt="logo" />
           </M.LogoLink>
         </M.Container>
