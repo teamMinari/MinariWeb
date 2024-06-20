@@ -175,3 +175,6 @@ export const Snsbtn = styled(Link)`
 `;
 
 // 로그인 화면
+
+export const ErrorMessage = styled.div`
+`

@@ -20,6 +20,7 @@ export const TermTxt = styled.div`
   padding: 10px;
   margin-top: 10px;
   text-decoration: underline;
+  cursor: pointer;
 `;
 
 export const TermExplanation = styled.div`
@@ -36,6 +37,10 @@ export const ReferTxt = styled.div`
   padding: 10px;
   position: absolute;
   bottom: 10px;
+  cursor: pointer;
+  &:hover{
+    text-decoration: underline;
+  }
 `;
 
 export const InfoContainer = styled.div`

@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import * as M from '../../styles/SingupStyle';
 import { ReactComponent as Logo } from "../../assets/image/logo.svg";
 import LoginBanner from "../../assets/image/Group 1544.svg";
-import { ReactComponent as Google } from "../../assets/image/google.svg";
 import { useNavigate } from "react-router-dom";
-import useLogin from "../../Hooks/Login/useLogin";
+import useSignup from "../../Hooks/Signup/useSignup";
 
 const Signup = () => {
   const navigate = useNavigate();
-  const {loginUser} = useLogin();
+  const { signupUser, loading, error } = useSignup();
+  const [email, setEmail] = useState("");
+  const [userId, setUserId] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleGoogleLogin = () => {
-    navigate("/googleLogin");
-  };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    loginUser();
+    if (password !== confirmPassword) {
+      alert("비밀번호가 일치하지 않습니다.");
+      return;
+    }
+    try {
+      await signupUser(email, userId, password);
+      navigate('/login');
+    } catch (err) {
+
+    };
   }
 
   return (
@@ -38,6 +47,9 @@ const Signup = () => {
           <M.EmailInput
             type="email"
             placeholder="이메일 주소를 입력하세요."
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
           ></M.EmailInput>
         </M.EmailContainer>
         <M.Id>아이디</M.Id>
@@ -46,6 +58,9 @@ const Signup = () => {
           <M.IdInput
             type="id"
             placeholder="아이디를 입력하세요."
+            value={userId}
+            onChange={(e) => setUserId(e.target.value)}
+            required
           ></M.IdInput>
         </M.PwContainer>
         <M.Password>비밀번호</M.Password>
@@ -54,6 +69,9 @@ const Signup = () => {
           <M.PwInput
             type="password"
             placeholder="비밀번호를 입력하세요."
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
           ></M.PwInput>
         </M.PwContainer>
         <M.Password>비밀번호 확인</M.Password>
@@ -62,9 +80,15 @@ const Signup = () => {
           <M.PwInput
             type="password"
             placeholder="비밀번호를 다시 입력하세요."
-          ></M.PwInput>
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+          />
         </M.PwContainer>
-        <M.SignupBtn type="submit">회원가입</M.SignupBtn>
+        {error && <M.ErrorMessage>{error}</M.ErrorMessage>}
+        <M.SignupBtn type="submit" disabled={loading}>
+          {loading ? "회원가입 중..." : "회원가입"}
+        </M.SignupBtn>
       </M.LoginPart>
       <M.BannerContainer>
         <img src={LoginBanner} alt="Login Banner" />
