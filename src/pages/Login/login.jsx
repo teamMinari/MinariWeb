@@ -8,33 +8,25 @@ import useLogin from "../../Hooks/Login/useLogin";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { loginUser } = useLogin();
-  const [email, setEmail] = useState("");
+  const { loginUser, loading, error } = useLogin();
+  const [id, setId] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
 
   const handleGoogleLogin = () => {
     navigate("/googleLogin");
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    loginUser();
-    setLoading(true);
-    setError("");
     try {
-      loginUser(email, password);
-      navigate("/");
+      await loginUser(id, password);
     } catch (err) {
-      setError("로그인에 실패하였습니다. 다시 시도해 주세요.");
-    } finally {
-      setLoading(false);
+      console.error("로그인 에러:", err);
     }
   };
 
   return (
-    <M.Form onSubmit={onSubmit}>
+    <M.Form>
       <M.LoginPart>
         <M.Container>
           <Logo />
@@ -46,17 +38,17 @@ const Login = () => {
           여기서
           <M.SignTxt to="/signup">가입 하세요!</M.SignTxt>
         </M.LoginInfo>
-        <M.Email>이메일</M.Email>
-        <M.EmailContainer>
-          <M.EmailIcon />
-          <M.EmailInput
-            type="email"
-            placeholder="이메일 주소를 입력하세요."
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+        <M.Id>아이디</M.Id>
+        <M.IdContainer>
+          <M.IdIcon />
+          <M.IdInput
+            type="text"
+            placeholder="아이디를 입력하세요."
+            value={id}
+            onChange={(e) => setId(e.target.value)}
             required
           />
-        </M.EmailContainer>
+        </M.IdContainer>
         <M.Password>비밀번호</M.Password>
         <M.PwContainer>
           <M.PwIcon />
@@ -73,8 +65,9 @@ const Login = () => {
           <M.LoginSaveLabel htmlFor="loginSave">로그인 저장</M.LoginSaveLabel>
           <M.PwForgot>비밀번호를 잊으셨나요?</M.PwForgot>
         </M.SaveAndForgotContainer>
-        <M.LoginBtn type="submit" disabled={loading}>
-          {loading ? "로그인 중" : "로그인"}
+        {error && <M.ErrorMessage>{error}</M.ErrorMessage>}
+        <M.LoginBtn type="submit" disabled={loading}  onClick={onSubmit}>
+          {loading ? "로그인 중..." : "로그인"}
         </M.LoginBtn>
         <M.SnsTxt>sns 로그인</M.SnsTxt>
         <M.Snsbtn onClick={handleGoogleLogin}>

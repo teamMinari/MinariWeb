@@ -1,22 +1,33 @@
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const useLogin = () => {
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-  const loginUser = async (email, password) => {
+  const loginUser = async (id, password) => {
     setLoading(true);
-    setError(null);
+    setError("");
     try {
-      const response = await axios.post("/api/login", { email, password });
-      localStorage.setItem("token", response.data.token);
+      const response = await axios.post("http://10.80.162.8/member/login", {
+        id,
+        password,
+      });
       setLoading(false);
+      navigate("/home");
       return response.data;
     } catch (err) {
       setLoading(false);
-      setError(err.response?.data?.message || "로그인에 실패했습니다.");
+      if (err.response) {
+        setError("로그인에 실패했습니다.");
+        console.error("로그인 에러:", err.response.data);
+      } else if (err.request) {
+        setError("서버에서 응답이 없습니다.");
+      } else {
+        setError("네트워크 오류가 발생했습니다.");
+      }
       throw err;
     }
   };

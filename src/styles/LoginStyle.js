@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import emailIconSrc from '../assets/image/email.svg';
+import idIconSrc from '../assets/image/id.svg';
 import pwIconSrc from '../assets/image/pw.svg';
 
 export const Form = styled.form`
@@ -49,7 +49,7 @@ export const SignTxt = styled(Link)`
   margin-left: 7px;
 `;
 
-export const Email = styled.div`
+export const Id = styled.div`
   font-size: 13px;
   font-weight: normal;
   color: #999;
@@ -57,7 +57,7 @@ export const Email = styled.div`
   margin-top: 60px;
 `;
 
-export const EmailInput = styled.input`
+export const IdInput = styled.input`
   font-size: 15px;
   width: 376px;
   height: 65px;
@@ -72,9 +72,9 @@ export const EmailInput = styled.input`
   }
 `;
 
-export const EmailIcon = styled.img.attrs({
-  src: emailIconSrc,
-  alt: "EmailIcon",
+export const IdIcon = styled.img.attrs({
+  src: idIconSrc,
+  alt: "IdIcon",
 })`
   margin-left: 122px;
   margin-bottom: -3px;
@@ -82,7 +82,7 @@ export const EmailIcon = styled.img.attrs({
   z-index: 1;
 `;
 
-export const EmailContainer = styled.div``;
+export const IdContainer = styled.div``;
 
 export const Password = styled.div`
   font-size: 13px;

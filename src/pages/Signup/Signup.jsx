@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as M from '../../styles/SingupStyle';
+import * as M from "../../styles/SingupStyle";
 import { ReactComponent as Logo } from "../../assets/image/logo.svg";
 import LoginBanner from "../../assets/image/Group 1544.svg";
 import { useNavigate } from "react-router-dom";
@@ -9,10 +9,9 @@ const Signup = () => {
   const navigate = useNavigate();
   const { signupUser, loading, error } = useSignup();
   const [email, setEmail] = useState("");
-  const [userId, setUserId] = useState("");
+  const [id, setId] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -21,15 +20,15 @@ const Signup = () => {
       return;
     }
     try {
-      await signupUser(email, userId, password);
-      navigate('/login');
+      await signupUser(email, id, password);
+      navigate("/login");
     } catch (err) {
-
-    };
-  }
+      console.error("회원가입 에러:", err);
+    }
+  };
 
   return (
-    <M.Form>
+    <M.Form onSubmit={onSubmit}>
       <M.LoginPart>
         <M.Container>
           <Logo />
@@ -50,18 +49,18 @@ const Signup = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-          ></M.EmailInput>
+          />
         </M.EmailContainer>
         <M.Id>아이디</M.Id>
         <M.PwContainer>
           <M.UserIcon />
           <M.IdInput
-            type="id"
+            type="text"
             placeholder="아이디를 입력하세요."
-            value={userId}
-            onChange={(e) => setUserId(e.target.value)}
+            value={id}
+            onChange={(e) => setId(e.target.value)}
             required
-          ></M.IdInput>
+          />
         </M.PwContainer>
         <M.Password>비밀번호</M.Password>
         <M.PwContainer>
@@ -72,7 +71,7 @@ const Signup = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-          ></M.PwInput>
+          />
         </M.PwContainer>
         <M.Password>비밀번호 확인</M.Password>
         <M.PwContainer>
@@ -86,7 +85,7 @@ const Signup = () => {
           />
         </M.PwContainer>
         {error && <M.ErrorMessage>{error}</M.ErrorMessage>}
-        <M.SignupBtn type="submit" disabled={loading}>
+        <M.SignupBtn type="submit" onClick={onSubmit}>
           {loading ? "회원가입 중..." : "회원가입"}
         </M.SignupBtn>
       </M.LoginPart>
