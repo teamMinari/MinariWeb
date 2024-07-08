@@ -10,7 +10,7 @@ const useSignup = () => {
     setError("");
     try {
       const response = await axios.post(
-        "http://10.80.162.8/member/register",
+        "http://10.80.162.8:8080/member/register",
         { email, id, password }
       );
       setLoading(false);

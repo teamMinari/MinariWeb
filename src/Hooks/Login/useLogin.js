@@ -16,7 +16,7 @@ const useLogin = () => {
         password,
       });
       setLoading(false);
-      navigate("/home");
+      navigate("/");
       return response.data;
     } catch (err) {
       setLoading(false);

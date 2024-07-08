@@ -85,7 +85,7 @@ const Signup = () => {
           />
         </M.PwContainer>
         {error && <M.ErrorMessage>{error}</M.ErrorMessage>}
-        <M.SignupBtn type="submit" onClick={onSubmit}>
+        <M.SignupBtn type="submit" disabled={loading}>
           {loading ? "회원가입 중..." : "회원가입"}
         </M.SignupBtn>
       </M.LoginPart>
