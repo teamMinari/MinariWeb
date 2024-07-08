@@ -4,7 +4,7 @@ const request = require('request');
 const cors = require('cors');
 
 const client_id = '069DAvm7A9WRXrhkh8SS';
-const client_secret = 'vQS6XGs468';
+const client_secret = 'sUeEviNvPN';
 
 app.use(cors());
 

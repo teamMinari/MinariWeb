@@ -35,7 +35,7 @@ const SideBar = () => {
           </M.NewsMenu>
           <M.QuizMenu
             onClick={() => {
-              navigation("/quiz");
+              navigation("/quizstart");
             }}
           >
             <M.QuizImg />

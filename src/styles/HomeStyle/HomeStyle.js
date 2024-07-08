@@ -203,7 +203,7 @@ export const Menu = styled.div`
 `;
 
 export const SimpleNewsCenterWrapper = styled.div`
-  width: 500px;
+  width: 600px;
   height: 300px;
   background-color: #ffffff;
   border-radius: 10px;
