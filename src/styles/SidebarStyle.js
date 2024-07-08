@@ -24,7 +24,7 @@ export const Sidebar = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 75px;
-  z-index: 0;
+  z-index: 300;
 `;
 
 export const Menu = styled.div`
