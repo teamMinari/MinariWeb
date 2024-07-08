@@ -11,7 +11,7 @@ const useLogin = () => {
     setLoading(true);
     setError("");
     try {
-      const response = await axios.post("http://10.80.162.8/member/login", {
+      const response = await axios.post("http://10.80.161.247/member/login", {
         id,
         password,
       });

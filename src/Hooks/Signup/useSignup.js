@@ -10,15 +10,14 @@ const useSignup = () => {
     setError("");
     try {
       const response = await axios.post(
-        "http://10.80.162.8:8080/member/register",
+        "http://10.80.161.247/member/register",
         { email, id, password }
       );
-      setLoading(false);
       return response.data;
     } catch (err) {
-      setLoading(false);
       setError(err.response?.data?.message || "회원가입에 실패했습니다.");
-      throw err;
+    } finally {
+      setLoading(false);
     }
   };
 
