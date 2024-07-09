@@ -36,7 +36,7 @@ export const Menu = styled.div`
   font-size: 20px;
   font-weight: 600;
   color: #7e84a3;
-  : hover{
+  :hover {
     cursor: pointer;
   }
 `;
