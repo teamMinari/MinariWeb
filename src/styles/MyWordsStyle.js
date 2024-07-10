@@ -23,6 +23,7 @@ export const WordContainer = styled.div`
   border-radius: 10px;
   margin-top: 65px;
   margin-left: 120px;
+  margin-bottom: 500px;
 `;
 
 export const ContainerTxt = styled.div`
