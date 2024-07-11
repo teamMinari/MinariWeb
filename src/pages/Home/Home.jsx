@@ -12,6 +12,32 @@ const Home = () => {
     const navigate = useNavigate();
     const [query, setQuery] = useState("경제");
     const [input, setInput] = useState(query);
+    const url = 'http://10.80.162.154:8080/terms';
+    const params = new URLSearchParams({ termNm: '예제용어' });
+    const termNm = '가계부실위험지수(HDRI)';
+    
+
+    fetch(`${url}?termNm=${encodeURIComponent(termNm)}`, {
+        method: 'DELETE',
+        headers: {
+          'Accept': '*/*',
+        }
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log(data);
+          if (data.success) {
+            console.log(`Term "${termNm}" deleted successfully`);
+          } else {
+            console.log(`Failed to delete term "${termNm}":`, data.message);
+          }
+        })
+        .catch(error => console.error('Error:', error));
 
     const handleGoToHome = () => {
         navigate("/dictionary");
@@ -77,16 +103,20 @@ const Home = () => {
                 <M.PageText>오늘의 경제 관련 기사</M.PageText>
                 <M.SimpleNewsCenterWrapper>
                     <M.NewsContainer>
-                        <SimpleNews query={query} />
+                        <SimpleNews query={"경제"} />
                     </M.NewsContainer>
-                    
+{/*                     
+                    검색 테스트용 인풋 창
                     <input 
+                    =======
+                    
+                    {/* <input 
                         type="text" 
                         placeholder="검색어를 입력하세요" 
                         value={input} 
                         onChange={(e) => setInput(e.target.value)}
                     />
-                    <button onClick={handleSearch}>검색</button>
+                    <button onClick={handleSearch}>검색</button> */}
                 </M.SimpleNewsCenterWrapper>
             </M.SimpleNewsContainer>
             <M.BannerWarp>

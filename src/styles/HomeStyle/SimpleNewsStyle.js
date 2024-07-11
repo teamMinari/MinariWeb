@@ -1,11 +1,6 @@
 import styled from 'styled-components';
-
 export const SimpleNewsContainer = styled.div`
-    margin: 0;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    max-height: 500px;
+    max-height: 800px;
     overflow-y: auto;
 `;
 
@@ -25,6 +20,17 @@ export const NewsContainer = styled.div`
 
 export const Article = styled.div`
     margin: 10px 0;
+    display: flex;
+    .imgContainer{
+        position: relative;
+        object-fit: cover;
+        margin-right: 10px;
+        height: 80px;
+    }
+`;
+
+export const ArticleText = styled.div`
+    
 `;
 
 export const ArticleTitle = styled.a`
@@ -40,10 +46,16 @@ export const ArticleTitle = styled.a`
 export const ArticleDescription = styled.p`
     font-size: 1em;
     color: #666;
+    padding: 0;
 `;
 
 export const ArticleImage = styled.img`
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
+
+`;
+
+export const NewsImg = styled.img` 
+    object-fit: cover;
 `;

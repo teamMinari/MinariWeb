@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
 
 export const PageContent = styled.div`
   display: flex;
-  z-index: 1;
+  z-index: 1001;
 `;
 
 export const MainContent = styled.div`
@@ -94,4 +94,5 @@ export const News = styled.div`
   border: 1px solid #d7dbec;
   border-radius: 10px;
   margin: 35px auto 0;
+  overflow: hidden;
 `;

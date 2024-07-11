@@ -23,7 +23,7 @@ export const Sidebar = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 75px;
-  z-index: 0;
+  z-index: 300;
 `;
 
 export const Menu = styled.div`
@@ -35,7 +35,7 @@ export const Menu = styled.div`
   font-size: 20px;
   font-weight: 600;
   color: #7e84a3;
-  : hover{
+  :hover {
     cursor: pointer;
   }
 `;
