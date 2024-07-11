@@ -121,7 +121,7 @@ export const profileImg = styled.img.attrs({
 export const ProfileMenu = styled.div`
   text-decoration: none;
   color: inherit;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
   &.active{
     ${activeStyle}
   }

@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 export const Form = styled.form`
   display: flex;
-  z-index: 100px;
 `;
 
 export const Bar = styled.header`
@@ -14,7 +13,7 @@ export const Bar = styled.header`
   display: flex;
   align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 3000;
 `;
 
 export const Container = styled.div`
