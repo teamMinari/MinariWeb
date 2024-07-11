@@ -1,6 +1,5 @@
 import React from "react";
 import * as M from "../../styles/SidebarStyle";
-import Header from "../Header/Header";
 import { useNavigate } from "react-router-dom";
 
 const SideBar = () => {

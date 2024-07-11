@@ -18,4 +18,5 @@ export const PageContent = styled.div`
 
 export const WordsContainer = styled.div`
   flex-direction: column;
+  margin-bottom: 500px;
 `;

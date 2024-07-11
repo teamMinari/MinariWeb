@@ -7,8 +7,7 @@ import quizIconSrc from '../assets/image/quiz.svg';
 import profileIconSrc from '../assets/image/my.svg';
 
 const activeStyle = {
-  backgroundColor: "#363CD5",
-  color: "#ffffff",
+  color: "#363CD5",
 };
 
 export const Form = styled.form`

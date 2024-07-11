@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "../pages/Login/login";
+import Login from "../pages/Login/Login";
+import Signup from "../pages/Signup/Signup";
 import Dictionary from "../pages/Dictionary/Dictionary";
 import SearchBar from "../components/SearchBar/SearchBar";
 import Home from "../pages/Home/Home";
@@ -19,6 +20,7 @@ const AppRouter = ({ openModal, closeModal, isOpen }) => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/dictionary" element={<Dictionary />} />
         <Route path="/searchbar" element={<SearchBar />} />
         <Route path="/termmeaning" element={<TermMeaning />} />
