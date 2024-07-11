@@ -5,13 +5,13 @@ const useSignup = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const signupUser = async (email, id, password) => {
+  const signupUser = async (email, id, password, confirmPassword) => {
     setLoading(true);
     setError("");
     try {
       const response = await axios.post(
-        "http://10.80.161.247/member/register",
-        { email, id, password }
+        "http://cheong.baekjoon.kr/member/register",
+        { email, id, password, confirmPassword }
       );
       return response.data;
     } catch (err) {

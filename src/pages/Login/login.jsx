@@ -26,7 +26,7 @@ const Login = () => {
   };
 
   return (
-    <M.Form onSubmit={onSubmit}>
+    <M.Form >
       <M.LoginPart>
         <M.Container>
           <Logo />
@@ -66,7 +66,7 @@ const Login = () => {
           <M.PwForgot>비밀번호를 잊으셨나요?</M.PwForgot>
         </M.SaveAndForgotContainer>
         {error && <M.ErrorMessage>{error}</M.ErrorMessage>}
-        <M.LoginBtn type="submit" disabled={loading}>
+        <M.LoginBtn type="submit" disabled={loading} onClick={onSubmit}>
           {loading ? "로그인 중..." : "로그인"}
         </M.LoginBtn>
         <M.SnsTxt>sns 로그인</M.SnsTxt>

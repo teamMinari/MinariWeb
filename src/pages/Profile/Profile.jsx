@@ -19,8 +19,8 @@ const Profile = () => {
                 <M.ProfileImg />
                 <M.ProfileDetails>
                   <M.IdTextContainer>
-                    <M.IdText>집가고싶다</M.IdText>
-                    <M.Id>(answngh123)</M.Id>
+                    <M.IdText>미나리</M.IdText>
+                    <M.Id>(minari123)</M.Id>
                     <M.ChangeIcon />
                     <M.MoreIcon />
                   </M.IdTextContainer>
@@ -37,6 +37,8 @@ const Profile = () => {
               <M.WaveOne />
               <M.WaveTwo />
               <M.WaveThree />
+              <M.WaveFour />
+              <M.WaveFive />
             </M.ProfileContainer>
             <M.boxContainer>
               <M.PointContainer>

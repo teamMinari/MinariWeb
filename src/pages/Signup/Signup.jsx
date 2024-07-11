@@ -20,7 +20,7 @@ const Signup = () => {
       return;
     }
     try {
-      await signupUser(email, id, password);
+      await signupUser(email, id, password, confirmPassword);
       navigate("/login");
     } catch (err) {
       console.error("회원가입 에러:", err);
@@ -28,7 +28,7 @@ const Signup = () => {
   };
 
   return (
-    <M.Form onSubmit={onSubmit}>
+    <M.Form>
       <M.LoginPart>
         <M.Container>
           <Logo />
@@ -85,7 +85,7 @@ const Signup = () => {
           />
         </M.PwContainer>
         {error && <M.ErrorMessage>{error}</M.ErrorMessage>}
-        <M.SignupBtn type="submit" disabled={loading}>
+        <M.SignupBtn type="submit" disabled={loading} onClick={onSubmit}>
           {loading ? "회원가입 중..." : "회원가입"}
         </M.SignupBtn>
       </M.LoginPart>

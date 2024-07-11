@@ -34,7 +34,7 @@ export const CenteredContent = styled.div`
 
 export const ProfileContainer = styled.div`
   width: 900px;
-  height: 380px;
+  height: 350px;
   background-color: #ffffff;
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 35px;
@@ -46,7 +46,7 @@ export const ProfileContainer = styled.div`
 
 export const ProfileBackContainer = styled.div`
   width: 900px;
-  height: 180px;
+  height: 150px;
   background: linear-gradient(to right, #363cd5, #cc00ff);
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 35px;
@@ -259,50 +259,42 @@ export const RequestBtn = styled.button`
 `;
 
 const waveAnimation1 = keyframes`
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px); /* 더 큰 움직임 */
-  }
-  100% {
-    transform: translateY(0);
-  }
+from {
+  transform: rotate(10deg);
+}
+to {
+  transform: rotate(3600deg);
+}
 `;
 
 const waveAnimation2 = keyframes`
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px); /* 더 큰 움직임 */
-  }
-  100% {
-    transform: translateY(0);
-  }
+from {
+  transform: rotate(30deg);
+}
+to {
+  transform: rotate(3600deg);
+}
 `;
 
 const waveAnimation3 = keyframes`
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-25px); /* 더 큰 움직임 */
-  }
-  100% {
-    transform: translateY(0);
-  }
+from {
+  transform: rotate(20deg);
+}
+to {
+  transform: rotate(3600deg);
+}
 `;
 
 export const WaveOne = styled.div`
   position: absolute;
   bottom: -24px;
+  top: 97%;
   left: 50%;
-  width: 150%;
-  height: 20%;
-  margin-left: -75%;
+  width: 1300px;
+  height: 1300px;
+  margin-left: -55%;
   border-radius: 40%;
-  animation: ${waveAnimation1} 5000ms infinite ease-in-out;
+  animation: ${waveAnimation1} 120000ms infinite ease-in-out;
   opacity: 0.1;
   background: #1e5eff;
 `;
@@ -310,12 +302,13 @@ export const WaveOne = styled.div`
 export const WaveTwo = styled.div`
   position: absolute;
   bottom: -24px;
+  top: 97%;
   left: 50%;
-  width: 150%;
-  height: 20%;
-  margin-left: -75%;
+  width: 1300px;
+  height: 1300px;
+  margin-left: -30%;
   border-radius: 40%;
-  animation: ${waveAnimation2} 7000ms infinite ease-in-out;
+  animation: ${waveAnimation2} 75000ms infinite ease-in-out;
   opacity: 0.1;
   background: #1e5eff;
 `;
@@ -323,12 +316,41 @@ export const WaveTwo = styled.div`
 export const WaveThree = styled.div`
   position: absolute;
   bottom: -24px;
+  top: 97%;
   left: 50%;
-  width: 150%;
-  height: 20%;
-  margin-left: -75%;
+  width: 1300px;
+  height: 1300px;
+  margin-left: -65%;
   border-radius: 40%;
-  animation: ${waveAnimation3} 9000ms infinite ease-in-out;
+  animation: ${waveAnimation3} 100000ms infinite linear;
+  opacity: 0.1;
+  background: #1e5eff;
+`;
+
+export const WaveFour = styled.div`
+  position: absolute;
+  bottom: -24px;
+  top: 97%;
+  left: 50%;
+  width: 1300px;
+  height: 1300px;
+  margin-left: -120%;
+  border-radius: 40%;
+  animation: ${waveAnimation2} 90000ms infinite ease-in-out;
+  opacity: 0.1;
+  background: #1e5eff;
+`;
+
+export const WaveFive = styled.div`
+  position: absolute;
+  bottom: -24px;
+  top: 97%;
+  left: 50%;
+  width: 1300px;
+  height: 1300px;
+  margin-left: -95%;
+  border-radius: 40%;
+  animation: ${waveAnimation3} 85000ms infinite ease-in-out;
   opacity: 0.1;
   background: #1e5eff;
 `;

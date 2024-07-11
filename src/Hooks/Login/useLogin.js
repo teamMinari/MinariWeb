@@ -11,7 +11,7 @@ const useLogin = () => {
     setLoading(true);
     setError("");
     try {
-      const response = await axios.post("http://10.80.161.247/member/login", {
+      const response = await axios.post("http://cheong.baekjoon.kr/member/login", {
         id,
         password,
       });
