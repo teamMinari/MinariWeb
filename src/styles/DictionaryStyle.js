@@ -29,7 +29,7 @@ export const CenteredContent = styled.div`
 
 export const DictionaryContainer = styled.div`
   width: 900px;
-  height: 1600px;
+  height: auto;
   background-color: #ffffff;
   border-radius: 10px;
   margin-top: 47px;
