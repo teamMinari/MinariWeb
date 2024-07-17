@@ -29,8 +29,8 @@ app.get('/search/news', function (req, res) {
    });
 });
 
-app.listen(3000, function () {
-   console.log('http://127.0.0.1:3000/search/news?query=경제 app listening on port 3000!');
+app.listen(3001, function () {
+   console.log('http://127.0.0.1:3001/search/news?query=경제 app listening on port 3000!');
 });
 
 // app.get('/scrape/economic-news', async (req, res) => {

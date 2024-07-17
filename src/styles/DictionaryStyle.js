@@ -33,7 +33,6 @@ export const DictionaryContainer = styled.div`
   background-color: #ffffff;
   border-radius: 10px;
   margin-top: 47px;
-  margin-bottom: 100px;
 `;
 
 export const PageText = styled.div`

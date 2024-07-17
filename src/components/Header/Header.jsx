@@ -12,7 +12,7 @@ const header = () => {
             <M.LogoImg src={logoImg} alt="logo" />
           </M.LogoLink>
         </M.Container>
-        <M.AuthContainer to="/myprofile">
+        <M.AuthContainer to="/profile">
           <M.MemberProfile src={profileImg} alt="profile" />
           <M.MemberName>admin</M.MemberName>
         </M.AuthContainer>

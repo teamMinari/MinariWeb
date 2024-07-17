@@ -9,7 +9,7 @@ const SimpleNews = ({ query }) => {
     useEffect(() => {
         const fetchArticles = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:3000/search/news', {
+                const response = await axios.get('http://127.0.0.1:3001/search/news', {
                     params: { query }
                 });
                 console.log(response.data.items);
@@ -34,7 +34,7 @@ const SimpleNews = ({ query }) => {
                     {articles && articles.length > 0 ? (
                         articles.map((article, index) => (
                             <M.Article key={index}>
-                                    <img className="imgContainer" src="https://picsum.photos/120/80/?Enterprise" alt = "face"/>
+                                   
                                 <M.ArticleText>
                                     <M.ArticleTitle href={article.link} target="_blank" rel="noopener noreferrer">
                                         {decodeHtml(article.title).replace(/<[^>]*>?/g, '')}

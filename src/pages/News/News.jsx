@@ -16,7 +16,7 @@ const News = ({ query }) => {
     useEffect(() => {
         const fetchArticles = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:3000/search/news', {
+                const response = await axios.get('http://127.0.0.1:3001/search/news', {
                     params: { query }
                 });
                 setArticles(response.data.items);
