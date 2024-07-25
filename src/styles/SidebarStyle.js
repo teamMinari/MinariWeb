@@ -1,18 +1,14 @@
-import styled from "styled-components";
-import { NavLink } from "react-router-dom";
-import homeIconSrc from '../assets/image/home.svg';
-import dictionaryIconSrc from '../assets/image/dictionary.svg';
-import newsIconSrc from '../assets/image/news.svg';
-import quizIconSrc from '../assets/image/quiz.svg';
-import profileIconSrc from '../assets/image/my.svg';
+import styled, { css } from "styled-components";
+import homeIconSrc from "../assets/image/home.svg";
+import dictionaryIconSrc from "../assets/image/dictionary.svg";
+import newsIconSrc from "../assets/image/news.svg";
+import quizIconSrc from "../assets/image/quiz.svg";
+import profileIconSrc from "../assets/image/my.svg";
 
-const activeStyle = {
-  color: "#363CD5",
-};
-
-export const Form = styled.form`
-  display: flex;
-  background-color: #f5f6fa;
+const iconStyle = `
+  margin-right: 19px;
+  margin-bottom: -1px;
+  color: #7E84A3;
 `;
 
 export const Sidebar = styled.div`
@@ -40,9 +36,18 @@ export const Menu = styled.div`
   }
 `;
 
-const iconStyle = `
-  margin-right: 19px;
-  margin-bottom: -1px;
+export const HomeContainer = styled.div`
+  display: flex;
+  margin-bottom: 50px;
+  background-color: ${(props) => (props.isActive ? "#363CD5" : "transparent")};
+  width: 170px;
+  height: 45px;
+  border-radius: 5px;
+  color: ${(props) => (props.isActive ? "#fff" : "#7E84A3")};
+  padding: 10px;
+  &:hover {
+    background-color: ${(props) => (props.isActive ? "#363CD5" : "#eee")};
+  }
 `;
 
 export const HomeImg = styled.img.attrs({
@@ -51,14 +56,25 @@ export const HomeImg = styled.img.attrs({
 })`
   ${iconStyle}
   margin-left: 1px;
+  
 `;
 
 export const HomeMenu = styled.div`
   text-decoration: none;
   color: inherit;
+`;
+
+export const DictionaryContainer = styled.div`
+  display: flex;
   margin-bottom: 50px;
-  &.active{
-    ${activeStyle}
+  background-color: ${(props) => (props.isActive ? "#363CD5" : "transparent")};
+  width: 170px;
+  height: 45px;
+  border-radius: 5px;
+  color: ${(props) => (props.isActive ? "#fff" : "#7E84A3")};
+  padding: 10px;
+  &:hover {
+    background-color: ${(props) => (props.isActive ? "#363CD5" : "#eee")};
   }
 `;
 
@@ -70,13 +86,24 @@ export const DictionaryImg = styled.img.attrs({
   margin-left: -1px;
 `;
 
-export const DictionaryMenu = styled.div`
-  text-decoration: none;
-  color: inherit;
+export const NewsContainer = styled.div`
+  display: flex;
   margin-bottom: 50px;
-  &.active{
-    ${activeStyle}
+  background-color: ${(props) => (props.isActive ? "#363CD5" : "transparent")};
+  width: 170px;
+  height: 45px;
+  border-radius: 5px;
+  color: ${(props) => (props.isActive ? "#fff" : "#7E84A3")};
+  padding: 10px;
+  &:hover {
+    background-color: ${(props) => (props.isActive ? "#363CD5" : "#eee")};
   }
+  ${(props) =>
+    props.selected &&
+    css`
+      filter: brightness(0) saturate(100%) invert(14%) sepia(63%)
+        saturate(6142%) hue-rotate(243deg) brightness(92%) contrast(93%);
+    `}
 `;
 
 export const NewsImg = styled.img.attrs({
@@ -86,12 +113,17 @@ export const NewsImg = styled.img.attrs({
   ${iconStyle}
 `;
 
-export const NewsMenu = styled.div`
-  text-decoration: none;
-  color: inherit;
+export const QuizContainer = styled.div`
+  display: flex;
   margin-bottom: 50px;
-  &.active{
-    ${activeStyle}
+  background-color: ${(props) => (props.isActive ? "#363CD5" : "transparent")};
+  width: 170px;
+  height: 45px;
+  border-radius: 5px;
+  color: ${(props) => (props.isActive ? "#fff" : "#7E84A3")};
+  padding: 10px;
+  &:hover {
+    background-color: ${(props) => (props.isActive ? "#363CD5" : "#eee")};
   }
 `;
 
@@ -102,27 +134,23 @@ export const QuizImg = styled.img.attrs({
   ${iconStyle}
 `;
 
-export const QuizMenu = styled.div`
-  text-decoration: none;
-  color: inherit;
-  margin-bottom: 50px;
-  &.active{
-    ${activeStyle}
+export const ProfileContainer = styled.div`
+  display: flex;
+  margin-bottom: 230px;
+  background-color: ${(props) => (props.isActive ? "#363CD5" : "transparent")};
+  width: 170px;
+  height: 45px;
+  border-radius: 5px;
+  color: ${(props) => (props.isActive ? "#fff" : "#7E84A3")};
+  padding: 10px;
+  &:hover {
+    background-color: ${(props) => (props.isActive ? "#363CD5" : "#eee")};
   }
 `;
 
-export const profileImg = styled.img.attrs({
+export const ProfileImg = styled.img.attrs({
   src: profileIconSrc,
   alt: "profileIcon",
 })`
   ${iconStyle}
-`;
-
-export const ProfileMenu = styled.div`
-  text-decoration: none;
-  color: inherit;
-  margin-bottom: 230px;
-  &.active{
-    ${activeStyle}
-  }
-`;
+`
