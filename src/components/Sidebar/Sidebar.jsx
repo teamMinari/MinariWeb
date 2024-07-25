@@ -1,56 +1,55 @@
-import React from "react";
+import { useState , React , Fragment } from "react";
 import * as M from "../../styles/SidebarStyle";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const SideBar = () => {
-  const navigation = useNavigate();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path;
+  let [btnActive, setBtnActive] = useState(false);
 
   return (
-    <React.Fragment>
+    <>
       <M.Sidebar>
         <M.Menu>
-          <M.HomeMenu
-            onClick={() => {
-              navigation("/");
-            }}
+          <M.HomeContainer
+            onClick={() => {navigate("/");}}
+            isActive={isActive("/")}
           >
-            <M.HomeImg />홈
-          </M.HomeMenu>
-          <M.DictionaryMenu
-            onClick={() => {
-              navigation("/dictionary");
-            }}
+            <M.HomeImg isActive={isActive("/")}/>
+            <M.HomeMenu>홈</M.HomeMenu>
+          </M.HomeContainer>
+          <M.DictionaryContainer
+            onClick={() => navigate("/dictionary")}
+            isActive={isActive("/dictionary")}
           >
-            <M.DictionaryImg />
+            <M.DictionaryImg isActive={isActive("/dictionary")}/>
             용어 사전
-          </M.DictionaryMenu>
-          <M.NewsMenu
-            onClick={() => {
-              navigation("/news");
-            }}
+          </M.DictionaryContainer>
+          <M.NewsContainer
+            onClick={() => navigate("/news")}
+            isActive={isActive("/news")}
           >
-            <M.NewsImg />
+            <M.NewsImg isActive={isActive("/news")}/>
             관련 기사
-          </M.NewsMenu>
-          <M.QuizMenu
-            onClick={() => {
-              navigation("/quizstart");
-            }}
+          </M.NewsContainer>
+          <M.QuizContainer
+            onClick={() => navigate("/quizstart")}
+            isActive={isActive("/quizstart")}
           >
-            <M.QuizImg />
+            <M.QuizImg isActive={isActive("/quizstart")}/>
             경제 퀴즈
-          </M.QuizMenu>
-          <M.ProfileMenu
-            onClick={() => {
-              navigation("/profile");
-            }}
+          </M.QuizContainer>
+          <M.ProfileContainer
+            onClick={() => navigate("/profile")}
+            isActive={isActive("/profile")}
           >
-            <M.profileImg />
+            <M.ProfileImg isActive={isActive("/profile")}/>
             프로필
-          </M.ProfileMenu>
+          </M.ProfileContainer>
         </M.Menu>
       </M.Sidebar>
-    </React.Fragment>
+    </>
   );
 };
 

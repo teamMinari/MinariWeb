@@ -26,8 +26,7 @@ export const LogoLink = styled(NavLink)`
 `;
 
 export const LogoImg = styled.img`
-  display: block;
-  width: 100%;
+  width: 105px;
 `;
 
 export const AuthContainer = styled(NavLink)`
