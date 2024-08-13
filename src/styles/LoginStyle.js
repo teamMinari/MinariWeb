@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import idIconSrc from '../assets/image/id.svg';
-import pwIconSrc from '../assets/image/pw.svg';
-
+import idIconSrc from "../assets/image/id.svg";
+import pwIconSrc from "../assets/image/pw.svg";
 
 export const Form = styled.form`
   display: flex;
@@ -66,7 +65,7 @@ export const IdInput = styled.input`
   margin-left: -17px;
   color: #000842;
   border: none;
-  border-bottom: 2px solid #999999;
+  border-bottom: 2px solid #dfdfdf;
   &:focus {
     border-bottom-color: #000842;
     outline: none;
@@ -101,7 +100,7 @@ export const PwInput = styled.input`
   margin-left: -17px;
   color: #000842;
   border: none;
-  border-bottom: 2px solid #999999;
+  border-bottom: 2px solid #dfdfdf;
   &:focus {
     border-bottom-color: #000842;
     outline: none;
@@ -177,5 +176,4 @@ export const Snsbtn = styled(Link)`
 
 // 로그인 화면
 
-export const ErrorMessage = styled.div`
-`
+export const ErrorMessage = styled.div``;

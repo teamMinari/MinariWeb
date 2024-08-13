@@ -13,6 +13,7 @@ import WordsList from "../pages/Profile/WordsList";
 import Quiz from "../pages/Quiz/Quiz";
 import QuizStart from "../pages/Quiz/QuizStart";
 import GrapeSeed from "../components/Tutorial/GrapeSeed";
+import GrapeGrains from "../components/Tutorial/GrapeGrains";
 
 
 const AppRouter = ({ openModal, closeModal, isOpen }) => {
@@ -33,6 +34,7 @@ const AppRouter = ({ openModal, closeModal, isOpen }) => {
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/quizstart" element={<QuizStart />} />
         <Route path="/grapeseed" element={<GrapeSeed />} />
+        <Route path="/grapegrains" element={<GrapeGrains />} />
       </Routes>
     </Router>
   );

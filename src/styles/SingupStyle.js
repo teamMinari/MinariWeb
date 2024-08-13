@@ -66,7 +66,7 @@ export const EmailInput = styled.input`
   margin-left: -17px;
   color: #000842;
   border: none;
-  border-bottom: 2px solid #999999;
+  border-bottom: 2px solid #dfdfdf;
   &:focus {
     border-bottom-color: #000842;
     outline: none;
@@ -102,7 +102,7 @@ export const IdInput = styled.input`
   margin-left: -17px;
   color: #000842;
   border: none;
-  border-bottom: 2px solid #999999;
+  border-bottom: 2px solid #dfdfdf;
   &:focus {
     border-bottom-color: #000842;
     outline: none;
@@ -135,7 +135,7 @@ export const PwInput = styled.input`
   margin-left: -17px;
   color: #000842;
   border: none;
-  border-bottom: 2px solid #999999;
+  border-bottom: 2px solid #dfdfdf;
   &:focus {
     border-bottom-color: #000842;
     outline: none;
